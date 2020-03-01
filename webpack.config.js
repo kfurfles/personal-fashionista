@@ -79,7 +79,8 @@ const config = {
         template: require('html-webpack-template'),
         inject: false,
         appMountId: 'app',
-        filename: 'index.html'
+        filename: 'index.html',
+        title: 'Fashionista'
       })
   ],
   optimization: {
