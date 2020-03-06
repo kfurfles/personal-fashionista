@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
   entry: [
@@ -22,13 +23,8 @@ const config = {
         test: /\.css$/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
+          'css-loader',
+          'postcss-loader',
         ]
       },
       {
@@ -54,10 +50,16 @@ const config = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+            },
+          },
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ]
       }
@@ -76,12 +78,13 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: require('html-webpack-template'),
-        inject: false,
-        appMountId: 'app',
-        filename: 'index.html',
-        title: 'Fashionista'
-      })
+      template: require('html-webpack-template'),
+      inject: false,
+      appMountId: 'app',
+      filename: 'index.html',
+      title: 'Fashionista'
+    }),
+    new MiniCssExtractPlugin()
   ],
   optimization: {
     runtimeChunk: 'single',
