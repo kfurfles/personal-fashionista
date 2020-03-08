@@ -5,5 +5,5 @@ module.exports = {
     'ts-jest': {
       diagnostics: false
     }
-  }
+  },
 };

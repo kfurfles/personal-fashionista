@@ -1,10 +1,13 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import { ButtonComponent } from '../App';
+import { ButtonComponent } from './App';
 
 describe("Button component", () => {
   test("Matches the snapshot", () => {
     const button = create(<ButtonComponent text="teste" />);
+    
+    expect(button.toTree()?.props.text).toBe('teste')
+    console.log(button.getInstance())
     expect(button.toJSON()).toMatchSnapshot();
   });
 });
