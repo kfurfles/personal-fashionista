@@ -17,7 +17,7 @@
     "build": "webpack -p --mode production",
     "start": "webpack-dev-server --hot --mode development",
     "test": "jest --coverage",
-    "test:watch": "jest --coverage"
+    "test:watch": "jest --watch --coverage"
   },
   "dependencies": {
     "react": "^16.13.0",
