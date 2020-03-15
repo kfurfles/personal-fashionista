@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { Header } from './header'
+import { Logo } from './logo'
 
-describe('Header component', () =>{
+describe('Logo component', () =>{
     test('create Header component', () =>{
-        expect(render(<Header />)).toBeTruthy()
+        expect(render(<Logo />)).toBeTruthy()
     })
 })

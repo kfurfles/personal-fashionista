@@ -20,9 +20,12 @@
     "test:watch": "jest --watch --coverage"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-hot-loader": "^4.12.19"
+    "react-hot-loader": "^4.12.19",
+    "sass-resources-loader": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.8.7",
@@ -46,7 +49,9 @@
     "html-webpack-plugin": "3.2.0",
     "html-webpack-template": "6.2.0",
     "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
+    "jest-css-modules": "^2.1.0",
     "jest-fetch-mock": "^3.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "4.13.1",
