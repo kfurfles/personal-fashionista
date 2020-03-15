@@ -2,7 +2,7 @@ import React from 'react';
 
 import './menu-button.scss'
 
-export function MenuButton() {
+export const MenuButton = () => {
   return (
     <div className="menu-button">
         <input className="menu-button__input" type="checkbox" id="menu-button"/>

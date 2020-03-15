@@ -1,18 +1,15 @@
 .header{
+    border-bottom: 1px solid #ccc;
     .content{
         justify-content: space-between;
         padding-top: 2px;
         padding-bottom: 2px;
-        border-bottom: 1px solid #ccc;
     }
 
     &__button{
         padding: 8px;
         font-size: 22px;
         line-height: 1;
-    }
-
-    &__logo{
-        margin: auto;
+        margin-right: -5px;
     }
 }

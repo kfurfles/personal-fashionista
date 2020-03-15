@@ -1,7 +1,11 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
-export function Logo(props: {className?: string}){
-    const className = props.className || ''
+type LogoProps = {
+    className?: string
+}
+
+export const Logo = ({ className }: LogoProps) => {
     return (
         <svg className={className} width="128" height="22" viewBox="0 0 512 88" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
             <path
@@ -9,4 +13,12 @@ export function Logo(props: {className?: string}){
             </path>
         </svg>
     )
+}
+
+Logo.propTypes = {
+    className: propTypes.string
+}
+
+Logo.defaultProps = {
+    className: ''
 }

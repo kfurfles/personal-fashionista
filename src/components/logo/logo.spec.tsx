@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { Logo } from './logo'
+import { Logo } from './index'
 
 describe('Logo component', () =>{
     test('create Header component', () =>{
