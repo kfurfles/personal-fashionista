@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import { MenuButton } from './menu-button'
+import { MenuButton } from './index'
 
 describe('MenuButton component', () =>{
     test('create MenuButton', () =>{
